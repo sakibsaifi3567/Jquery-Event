@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #box{
+      border: 2px solid green;
+      width: 50%;
+      height: 300px;
+      background-color:ivory;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    h2{
+      color: lightseagreen;
+    }
+   
+  </style>
+</head>
+<body>
+  
+  
+  <div id="box">
+    <h2>Test Box</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, repellendus qui porro aliquid voluptatum nisi praesentium corrupti ex omnis veniam distinctio ratione quos quam ad soluta fugit quia dignissimos repellat.  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores odio ad corrupti mollitia ea vitae consequatur sapiente officiis optio in atque, enim assumenda culpa nisi? Voluptatem eius similique provident officia!</p>
+    <br>
+    <button id="button">Test Button</button>
+  </div>
+  <br>
+  
+  <h3></h3>
+
+
+<script src="jquery.js"></script>
+<script>
+ $(document).ready(function(){
+  $('#box').click(function(){
+    alert("The div element was click")
+  });
+  $('h2').click(function(){
+    alert("The h2 element was click")
+  });
+  $('p').click(function(event){
+    event.stopPropagation();  //event lagane se ab sirf para alert hoga uska parent alert ni hoga hahaha...
+    alert("The p element was click")
+  });
+  $('#button').click(function(){
+    alert("The button element was click")
+  });
+ });
+</script>
+</body>
+</html>

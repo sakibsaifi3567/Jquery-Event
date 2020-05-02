@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #box{
+      border: 2px solid green;
+      width: 50%;
+      height: 300px;
+      background-color:ivory;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    h2{
+      color: lightseagreen;
+    }
+   
+  </style>
+</head>
+<body>
+  
+  
+  <div id="box">
+    <center><h1 style="color: lightseagreen;">SAKIB SAIFI</h1></center>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum eligendi dolores adipisci magni deserunt quibusdam ullam obcaecati provident voluptas enim porro maiores explicabo sint voluptatem a aut, sequi, qui facere.</p>
+    <br>
+    <button>Test Button</button>
+  </div>
+  <br>
+  
+  <h3></h3>
+
+
+<script src="jquery.js"></script>
+<script>
+ $(document).ready(function(){
+  $('#box').on("click",function(){
+    $('h3').html("Target Element: " + event.target.innerHTML);//javascript ki property hai isliye event bhi usi ke use honge
+  });
+ });
+</script>
+</body>
+</html>
